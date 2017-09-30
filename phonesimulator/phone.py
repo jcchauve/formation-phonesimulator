@@ -1,5 +1,7 @@
 """Classe de base Phone"""
 import requests
+
+
 # import xml.etree.ElementTree as ET
 
 
@@ -16,7 +18,8 @@ class Phone(object):
         raise NotImplementedError
 
     def _real_get_news(self):
-        return requests.get("https://www.yahoo.com/news/rss/entertainment").text
+        return requests.get("https://www.yahoo.com/news/rss/entertainment")\
+            .text
 
     def show_news(self):
         if self.last_news is not None:

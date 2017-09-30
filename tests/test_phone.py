@@ -2,9 +2,9 @@ import unittest
 from phonesimulator import phone
 
 try:
-    from mock import MagicMock, patch, Mock
+    from mock import MagicMock, patch
 except:
-    from unittest.mock import MagicMock, patch, Mock
+    from unittest.mock import MagicMock, patch
 
 # import xmldict
 
@@ -46,7 +46,8 @@ class factPhone(unittest.TestCase):
         mock.return_value = xxx
         news = self.phone.show_news()
         self.assertEqual(news, txt2)
-        mock.assert_called_once_with("https://www.yahoo.com/news/rss/entertainment")
+        mock.assert_called_once_with(
+            "https://www.yahoo.com/news/rss/entertainment")
 
     def test_show_news_patch_with(self):
         xxx = TxtObject()

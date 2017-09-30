@@ -2,8 +2,9 @@
 """setup.py"""
 
 import os
-import sys
 from setuptools import setup
+
+
 # from setuptools.command.test import test as TestCommand
 
 
@@ -15,7 +16,7 @@ def read_content(filepath):
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "License :: OSI Approved :: GNU",
     "Programming Language :: Python",
     "Programming Language :: Python :: 2",
     "Programming Language :: Python :: 2.7",
@@ -27,14 +28,13 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 
-
-long_description = ( 'long desc')
+long_description = ('long desc')
 
 requires = ['setuptools', 'requests']
 
 extras_require = {
     'reST': ['Sphinx'],
-    }
+}
 if os.environ.get('READTHEDOCS', None):
     extras_require['reST'].append('recommonmark')
 

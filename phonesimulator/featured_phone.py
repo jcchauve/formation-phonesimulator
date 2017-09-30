@@ -6,8 +6,10 @@ try:
 except:
     from .phone import Phone
 
+
 class FeaturedPhone(Phone):
     """phonte"""
+
     def reset(self):
         self.battery_level = 40
 
